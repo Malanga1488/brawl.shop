@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8'>
+	<title>Купить бойца джин по очень дешевой цене</title>
+	<meta http-equiv='Content-Type' content='text/html'>
+	<meta name='description' content='Купить бойца джина для игры Brawl Stars по очень низкой цене'>
+	<meta name='Keywords' content='боец джин, Brawl Stars, купить бойца джина по низкой цене, джин, лучший онлайн магазин по Brawl Stars'>
+	<link rel='shortcut icon' href='img/icon.png'>
+	<link rel='stylesheet' href='css/accounts.css'>
+</head>
+<body>
+	<header>
+		<div id='title'>
+			<img src='img/header.png'>
+			<span id='brawl'>Brawl</span>
+			<span id='shop'>Shop</span>
+		</div>
+
+		<div id='links'>
+			<a href='index.html' id='gems'>Гемы</a>
+			<a href='reviews.html' id='rev'>Отзывы</a>
+			<a href='heroes.html' id='hrs'>Бойцы</a>
+		</div>
+	</header>
+
+	<main>
+		<div id='title'>
+			<span>Джин (Мифический)</span>
+		</div>
+
+		<div id='product'>
+			<img src='img/warranty.png' id='w1'>
+			<img src='img/acdjin.jpg' id='prd'>
+			<img src='img/warrantyPrice.png' id='w2'>
+		</div>
+
+		<div id='info'>
+			<div id='get'>
+				<span>Как получить товар прямиком в игру? Вы должны следовать некоторым нашим инструкциям, чтобы получить товар в игре. Самое важное - это правильно заполнить предложенную нами форму.</span>
+			</div>
+
+			<div id='form'>
+				<span>Для того, чтобы получить свою покупку, вам нужно обязательно заполнить форму. Она состоит из ввода логина от аккаунта, который привязан к игре Brawl Stars, имя в игре и Captcha.</span>
+			</div>
+
+			<div id='time'>
+				<span>Бот нашего сервиса после вашей оплаты автоматически совершает покупку гемов, если вы покупаете гемы. Если же нет, то он за эти гемы покупает бойца. Это занимает не более 5 минут.</span>
+			</div>
+		</div>
+	</main>
+
+	<div id='wave'>
+		<img src='img/wave2.png'>
+	</div>
+
+	<user>
+		<div id='title'>
+			<span>Заполните форму</span>
+		</div>
+
+		<div id='form'>
+			<input type='text' placeholder='Аккаунт от Brawl Stars' id='t1'></br>
+			<input type='text' placeholder='Ваше имя в игре' id='t2'></br>
+			<img src='' id='captcha'></br>
+			<input type='text' placeholder='Какую цифру вы видете?' id='cpt'></br>
+			<button onclick='qiwi()'>Купить за 99 ₽</button>
+		</div>
+	</user>
+
+	<info>
+		<div id='copyright'>
+			<span><a target='_blank' href='https://www.copyright.ru/documents/registraciy_avtorskih_prav/Copyright_registratsiya'>© Copyright 2019-2020</a> все права защищенны</span>
+		</div>	
+
+		<div id='supercell'>
+			<span>Одобрено командой <a target='_blank' href='https://supercell.com/en/support/'>SUPERCELL</a></span>
+		</div>	
+
+		<div id='orders'>
+			<span>Более 3000 заказов</span>
+		</div>
+
+		<div id='rev'>
+			<span>Более <a href='reviews.html'>2900 положительных отзывов</a></span>
+		</div>	
+	</info>
+
+	<footer1>
+		<div id='title'>
+			<span id='brawl'>Brawl</span>
+			<span id='shop'>Shop</span>
+		</div>
+	</footer1>
+
+	<footer2>
+		<div id='title'>
+			<span id='brawl'>Brawl</span>
+			<span id='shop'>Shop</span>
+		</div>
+	</footer2>
+
+	<script>
+		function qiwi() {
+			var t1 = document.getElementById('t1');
+			var t2 = document.getElementById('t2');
+
+			if (t1.value == '') {
+				t1.style.backgroundColor = '#FF0000';
+			}
+
+			else {
+				t1.style.backgroundColor = '#7E7BFF';
+			}
+
+			if (t2.value == '') {
+				t2.style.backgroundColor = '#FF0000';
+			}
+
+			else {
+				t2.style.backgroundColor = '#7E7BFF';
+			}
+
+			var inp = document.getElementById('cpt');
+			
+			if (inp.value == cpt && t1.value != '' && t2.value != '') {
+				t1.style.backgroundColor = '#7E7BFF';
+				t2.style.backgroundColor = '#7E7BFF';
+				inp.style.backgroundColor = '#7E7BFF';
+				window.open('https://qiwi.me/action/checkout/brawlshop_gems?sum=99&currency_id=643&source=qw');
+			}
+
+			else if (inp.value == cpt && t1.value == '' && t2 != '') {
+				t1.style.backgroundColor = '#FF0000';
+				t2.style.backgroundColor = '#7E7BFF';
+				inp.style.backgroundColor = '#7E7BFF';
+			}
+
+			else if (inp.value == cpt && t1.value != '' && t2 == '') {
+				t1.style.backgroundColor = '#7E7BFF';
+				t2.style.backgroundColor = '#FF0000';
+				inp.style.backgroundColor = '#7E7BFF';
+			}
+
+			else if (inp.value == cpt && t1.value == '' && t2 == '') {
+				t1.style.backgroundColor = '#FF0000';
+				t2.style.backgroundColor = '#FF0000';
+				inp.style.backgroundColor = '#7E7BFF';
+			}
+
+			else {
+				inp.style.backgroundColor = '#FF0000';
+
+				rand = Math.floor(Math.random() * captcha.length);
+
+				if (captcha[rand] == '1') {
+					cpt = document.getElementById('captcha').src = 'img/c1.png';
+					cpt = '1';
+				}
+
+				else if (captcha[rand] == '2') {
+					cpt = document.getElementById('captcha').src = 'img/c2.png';
+					cpt = '2';
+				}
+
+				else if (captcha[rand] == '5') {
+					cpt = document.getElementById('captcha').src = 'img/c5.png';
+					cpt = '5';
+				}
+
+				else if (captcha[rand] == '7') {
+					cpt = document.getElementById('captcha').src = 'img/c7.png';
+					cpt = '7';
+				}
+			}
+
+		}
+
+		captcha = ['1', '2', '5', '7'];
+		rand = Math.floor(Math.random() * captcha.length);
+
+		if (captcha[rand] == '1') {
+			cpt = document.getElementById('captcha').src = 'img/c1.png';
+			cpt = '1';
+		}
+
+		else if (captcha[rand] == '2') {
+			cpt = document.getElementById('captcha').src = 'img/c2.png';
+			cpt = '2';
+		}
+
+		else if (captcha[rand] == '5') {
+			cpt = document.getElementById('captcha').src = 'img/c5.png';
+			cpt = '5';
+		}
+
+		else if (captcha[rand] == '7') {
+			cpt = document.getElementById('captcha').src = 'img/c7.png';
+			cpt = '7';
+		}	
+	</script>
+</body>
+</html>
